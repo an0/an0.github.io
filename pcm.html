@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <TITLE>Shop Site Landing Page</TITLE>
+</head>
+
+<body>
+    <script>
+        function convert() {
+            const request = new XMLHttpRequest();
+            const url = 'https://coldcode.cc/pixel.html';
+            request.open("GET", url);
+            request.send();
+            request.onreadystatechange = (e) => {
+                console.log(request.responseText)
+            }
+        }
+    </script>
+
+    <h2 style="color:red;">Buy</h2>
+    <input name="Purchase" type="button" onclick="convert()" value="Purchase">
+</body>
+
+</html>
