@@ -7,14 +7,21 @@
 <body>
     <script>
         function convert() {
-            fetch('https://coldcode.cc/pixel.html')
+            console.log("pixel");
+            fetch('https://coldcode.cc/pixel.html', {
+                keepalive: true
+            })
                 .then(response => response.json())
                 .then(data => console.log(data));
         }
+
+        window.onpagehide = convert;
+        // window.onunload = convert;
     </script>
 
     <h2 style="color:red;">Buy</h2>
     <input name="Purchase" type="button" onclick="convert()" value="Purchase">
+    <a href="https://apple.com"></a>
 </body>
 
 </html>
