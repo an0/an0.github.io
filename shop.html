@@ -14,7 +14,9 @@
     <script>
         function convert() {
             console.log("pixel");
-            fetch('https://www.coldcode.cc/pixel.html')
+            fetch('https://coldcode.cc/pixel.html', {
+                keepalive: true
+            })
                 .then(response => response.json())
                 .then(data => console.log(data));
         }
